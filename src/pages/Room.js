@@ -12,6 +12,7 @@ const Room = () => {
         </Link>
       </Banner>
     </Hero>
+    
   );
 };
 
