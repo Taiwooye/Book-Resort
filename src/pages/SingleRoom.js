@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link, useParams } from "react-router-dom";
 import { RoomContext } from "../context";
+import StyledHero from "../components/StyledHero";
 
 const SingleRoom = () => {
   let { slug } = useParams();
@@ -18,15 +19,23 @@ const SingleRoom = () => {
 
   const {
     name,
-    description,
-    capacity,
-    size,
-    price,
-    extras,
-    breaskfast,
-    pets,
+    // description,
+    // capacity,
+    // size,
+    // price,
+    // extras,
+    // breaskfast,
+    // pets,
     images,
   } = room;
+
+  const StyledHero = {
+    minHeight: "60vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: `url(${images[0] || this.state.defaultBcg})`,
+  };
 
   return (
     <div>
@@ -38,13 +47,14 @@ const SingleRoom = () => {
           </Link>
         </div>
       ) : (
-        <Hero hero="roomsHero">
+        // <div img={images[0] || this.state.defaultBcg}>
+        <div style={StyledHero}>
           <Banner title={`${name} room`}>
             <Link to="/room" className="btn-primary">
-              back to room
+              back to rooms
             </Link>
           </Banner>
-        </Hero>
+        </div>
       )}
     </div>
   );
