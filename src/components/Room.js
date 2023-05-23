@@ -5,16 +5,16 @@ import PropTypes from "prop-types";
 import { memo } from "react";
 const Room = memo(({ room }) => {
   const { name, slug, images, price } = room;
-  // console.log(name);
+
   return (
-    <article className="room">
+    <article className="rooms">
       <div className="img-container">
         <img src={images[0] || defaultImg} alt="single room" />
         <div className="price-top">
           <h6>${price}</h6>
           <p>per night</p>
         </div>
-        <Link to={`/rooms/${slug}`} className="btn-primary room-link">
+        <Link to={`/room/${slug}`} className="btn-primary room-link">
           features
         </Link>
       </div>
@@ -28,7 +28,7 @@ Room.propTypes = {
     name: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    price: PropTypes.number.isRequired
-  })
+    price: PropTypes.number.isRequired,
+  }),
 };
 export default Room;
