@@ -52,5 +52,13 @@ getRoom =(slug) =>{
 
 const RoomConsumer = RoomContext.Consumer;
 
-
 export {RoomProvider,RoomConsumer,RoomContext};
+
+export function withRoomConsumer(Component) {
+  return function ConsumerWrapper(props){
+    return <RoomConsumer>
+      {value => <Component {...props} context={value}/> }
+    </RoomConsumer>
+  }
+
+}
