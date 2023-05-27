@@ -124,7 +124,7 @@ const RoomsFilter = ({ rooms }) => {
             <input
               type="checkbox"
               name="pets"
-              checked={pets}
+              checked={pets} 
               onChange={handleChange}
             />
             <label htmlFor="breakfast">pets</label>

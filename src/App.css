@@ -417,6 +417,7 @@ h6 {
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
+  
 }
 @media screen and (min-width: 992px) {
   .single-room-images,
@@ -463,6 +464,7 @@ h6 {
 /*  rooms fitler*/
 .filter-container {
   padding: 5rem 0;
+  
 }
 .filter-form {
   width: 60vw;
@@ -471,6 +473,7 @@ h6 {
   grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 40px;
+  
 }
 .form-group {
   text-transform: capitalize;
@@ -479,14 +482,17 @@ h6 {
   display: block;
   letter-spacing: var(--mainSpacing);
   margin-bottom: 0.5rem;
+ 
 }
 .form-control {
   width: 100%;
   background: transparent;
   font-size: 1rem;
+  
 }
 .size-inputs {
   display: flex;
+  
 }
 .size-input {
   width: 40%;
