@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import items from "./data";
-// import Client from "./Contentful";
+import Client from "./Contentful";
+ 
 
 const RoomContext = React.createContext();
 
@@ -22,11 +23,13 @@ export default class RoomProvider extends Component {
     pets: false
   };
 
+  //getdata
+
+
   componentDidMount() {
     // this.getData();
     let rooms = this.formatData(items);
     let featuredRooms = rooms.filter(room => room.featured === true);
-    //
     let maxPrice = Math.max(...rooms.map(item => item.price));
     let maxSize = Math.max(...rooms.map(item => item.size));
     this.setState({
@@ -106,7 +109,6 @@ export default class RoomProvider extends Component {
     }
     //filter by pets
     if (pets) {
-      tempRooms = tempRooms.filter(room => room.pets === true);
     }
     this.setState({
       sortedRooms: tempRooms
